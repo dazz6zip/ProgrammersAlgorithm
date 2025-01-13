@@ -1,18 +1,6 @@
 package org.pack.jan_1.PCCP.Lv1_동영상재생기;
 
 public class dazz6 {
-    public static void main(String[] args) {
-        dazz6 dazz6 = new dazz6();
-        String[] aa = {"next", "prev"};
-        System.out.println(dazz6.solution("34:33", "13:00", "00:55", "02:55", aa));
-
-        String[] bb = {"prev", "next", "next"};
-        System.out.println(dazz6.solution("10:55", "00:05", "00:15", "06:55", bb));
-
-        String[] cc = {"next"};
-        System.out.println(dazz6.solution("07:22", "04:05", "00:15", "04:07", cc));
-    }
-
     public String solution(String video_len, String pos, String op_start, String op_end, String[] commands) {
         String answer = "";
 
