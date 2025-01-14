@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class dazz6 {
+
+    // todo: 75점이 최대...... ㅜㅜ
     public static void main(String[] args) {
         dazz6 dazz6 = new dazz6();
         int[] aa = {5, 3, 2};
