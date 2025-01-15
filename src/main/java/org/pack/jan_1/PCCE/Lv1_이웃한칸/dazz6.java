@@ -1,16 +1,6 @@
 package org.pack.jan_1.PCCE.Lv1_이웃한칸;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class dazz6 {
-    public static void main(String[] args) {
-        String[][] aa = {{"blue", "red", "orange", "red"}, {"red", "red", "blue", "orange"}, {"blue", "orange", "red", "red"}, {"orange", "orange", "red", "blue"}};
-        int bb = 1;
-        int cc = 1;
-
-        System.out.println(solution(aa, bb, cc));
-    }
     public static int solution(String[][] board, int h, int w) {
         int n = board.length;
         int count = 0;
