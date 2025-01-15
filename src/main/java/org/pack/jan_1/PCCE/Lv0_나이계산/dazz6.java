@@ -10,7 +10,7 @@ public class dazz6 {
         int answer = 0;
 
         if (age_type.equals("Korea")) {
-            answer = 2030 - year - 1;
+            answer = 2030 - year + 1;
             ;
         } else if (age_type.equals("Year")) {
             answer = 2030 - year;
