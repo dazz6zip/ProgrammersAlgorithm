@@ -1,6 +1,8 @@
+package org.pack.jan_1.PCCE.Lv0_나이계산;
+
 import java.util.Scanner;
 
-public class Solution {
+public class hyo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int year = sc.nextInt();

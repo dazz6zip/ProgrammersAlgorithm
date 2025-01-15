@@ -1,4 +1,6 @@
-class Solution {
+package org.pack.jan_1.PCCE.Lv0_산책;
+
+class hyo {
     public int[] solution(String route) {
         int east = 0;
         int north = 0;
