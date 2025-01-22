@@ -3,40 +3,39 @@ package org.pack.jan_2.Lv1_신고결과받기;
 import java.util.*;
 
 public class dazz6 {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(new dazz6().solution(new String[]{"muzi", "frodo", "apeach", "neo"}, new String[]{"muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"}, 2)));
-        System.out.println(Arrays.toString(new dazz6().solution(new String[]{"con", "ryan"}, new String[]{"ryan con", "ryan con", "ryan con", "ryan con"}, 3)));
-    }
-
     public Integer[] solution(String[] id_list, String[] report, int k) {
         Map<String, Integer> reportCount = new HashMap<>();
+        Map<String, Set<String>> reportArchive = new HashMap<>();
+        Map<String, Integer> result = new HashMap<>();
 
         for (String id : id_list) {
             reportCount.put(id, 0);
+            reportArchive.put(id, new HashSet<>());
+            result.put(id, 0);
         }
 
-        Set<String[]> reportArchive = new HashSet<>();
         for (String r : report) {
             String[] split = r.split(" ");
 
-            reportCount.put(split[1], reportCount.get(split[1]) + 1);
-            reportArchive.add(new String[]{split[0], split[1]});
+            if (!reportArchive.get(split[0]).contains(split[1])) {
+                reportArchive.get(split[0]).add(split[1]);
+                reportCount.put(split[1], reportCount.get(split[1]) + 1);
+            }
         }
 
-        Map<String, Integer> result = new HashMap<>();
-
-        for (Map.Entry<String, Integer> entry : reportCount.entrySet()) {
-            if (entry.getValue() >= k) {
-                for (String[] s : reportArchive) {
-                    if (s[1].equals(entry.getKey())) {
-                        result.put(entry.getKey(), result.getOrDefault(entry.getKey(), 0) + 1);
+        for (Map.Entry<String, Integer> count : reportCount.entrySet()) {
+            if (count.getValue() >= k) {
+                String reported = count.getKey();
+                for (Map.Entry<String, Set<String>> archive : reportArchive.entrySet()) {
+                    if (archive.getValue().contains(reported)) {
+                        result.put(archive.getKey(), result.get(archive.getKey()) + 1);
                     }
                 }
             }
         }
 
-        return result.values().toArray(new Integer[0]);
+        return Arrays.stream(id_list)
+                .map(result::get)
+                .toArray(Integer[]::new);
     }
-
-
 }
