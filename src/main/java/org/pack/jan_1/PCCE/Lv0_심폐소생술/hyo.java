@@ -1,3 +1,5 @@
+package org.pack.jan_1.PCCE.Lv0_심폐소생술;
+
 class Solution {
     public int[] solution(String[] cpr) {
         int[] answer = {0, 0, 0, 0, 0};

@@ -1,3 +1,4 @@
+package org.pack.jan_1.PCCE.Lv0_닉네임규칙;
 class Solution {
     public String solution(String nickname) {
         String answer = "";

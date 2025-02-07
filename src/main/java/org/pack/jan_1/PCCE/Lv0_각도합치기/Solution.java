@@ -1,3 +1,4 @@
+package org.pack.jan_1.PCCE.Lv0_각도합치기;
 import java.util.Scanner;
 
 public class Solution {

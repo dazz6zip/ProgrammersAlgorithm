@@ -1,3 +1,4 @@
+package org.pack.jan_1.PCCE.Lv0_가습기;
 class Solution {
     public int func1(int humidity, int val_set){
         if(humidity < val_set)
