@@ -1,11 +1,6 @@
 package org.pack.feb_2.Lv1_소수만들기;
 
 public class dazz6 {
-    public static void main(String[] args) {
-        System.out.println(new dazz6().solution(new int[]{1, 2, 3, 4}));
-        System.out.println(new dazz6().solution(new int[]{1, 2, 7, 6, 4}));
-    }
-
     public int solution(int[] nums) {
         int answer = 0;
 
