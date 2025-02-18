@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class dazz6 {
-    public static void main(String[] args) {
-        System.out.println("1) 3 : " + new dazz6().solution(10, new int[][]{{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {3, 7, 8, 9, 10}, {2, 5, 7, 9, 10}, {3, 4, 5, 6, 7}}, new int[]{2, 3, 4, 3, 3}));
-        System.out.println("2) 5 : " + new dazz6().solution(15, new int[][]{{2, 3, 9, 12, 13}, {1, 4, 6, 7, 9}, {1, 2, 8, 10, 12}, {6, 7, 11, 13, 15}, {1, 4, 10, 11, 14}}, new int[]{2, 1, 3, 0, 1}));
-    }
-
     public int solution(int n, int[][] q, int[] ans) {
         int answer = 0;
 
